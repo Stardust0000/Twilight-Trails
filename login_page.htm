@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="login-style.css" rel="stylesheet">
+      
+</head>
+<body>
+
+  <!-- Login container -->
+   <div class="login-container">
+    <h1>Welcome Back!</h1>
+  
+    <!-- Form -->
+    <form class="login-form" method="post" action="mainpage.htm">
+      <div class="field">
+        <label>Username:</label>
+        <input type="text" name="usn" id="usn" required pattern="^[A-Za-z]{3,49}$">
+      <span class="errorText"></span>
+        </div>
+
+      <div class="field">
+      <label>Email:</label>
+      <input type="email" name="em" id="em" required pattern="^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-ZA-Z]{2,}$">
+      </div>
+
+      <div class="field">
+      <label>Password:</label>
+      <input type="password" name="pwd" id="pwd" required pattern=".{8,}">
+      </div>
+
+      <div class="remember">
+      <input type="checkbox" name="chkbx"> <span>Remember Me</span>
+      </div> 
+      
+      <button type="submit">Login</button>
+    </form>
+    <br>
+    <span class="lnk"><a href="signup.htm">New user? Signup!</a></span>
+   </div>
+<script src="loginjs.js"></script>
+</body>
+</html>

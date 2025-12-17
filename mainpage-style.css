@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;1,300&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color:rgba(70, 76, 90, 1) ;
+}
+.navbar{
+    background-color:rgba(70, 76, 90, 1);
+    display: inline-flex;
+    height: 13vh;
+    width: 100vw;
+    position: fixed;
+    font-size: 18px;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.navbar_container{
+    background-color: rgba(31, 34, 40, 1);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 50px;
+    height: 10vh;
+    width: 100%;
+    max-width: 1300px;
+}
+.navbar_menu{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.navbar_menu li{
+    padding: 0 15px;
+    font-size: 16px;
+    font-family: 'Inter';
+}
+.maintxt{
+    padding: 10px 0px;
+    font-size: 30px;
+    font-family: 'Italiana';
+}
+.navbar_container a{
+    text-decoration: none;
+    color: white;
+}
+.navbar_menu li {
+    list-style: none;
+}
+.navbar_toggle .bar{
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.5s ease-in-out;
+    background-color: white;
+}
+/*Main slide show*/
+.slideshow-container{
+    position: relative;
+    margin:auto 10px;
+    width: 100%;
+    height: 95vh;
+    background-color:rgba(70, 76, 90, 1) ;
+}
+.slides{
+    display: none;
+}
+.slideimg{
+    vertical-align: middle;
+    height: 95vh;
+    width: 95%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2rem;
+}
+
+.dots-container{
+    text-align: center; text-align: center;
+    margin-top: -48px;
+    z-index: 9;
+    position: relative;
+}
+
+.dot{
+    position: relative;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: rgb(187, 187, 187);
+    transition: background-color 0.6s ease;
+}
+.active{
+    background-color: rgb(113, 113, 113);
+}
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade{
+    from{opacity: 0.4} to{opacity: 1}
+}
+/*main text section*/
+.txt-container{
+    margin-top: 2.5rem;
+    background-color:rgba(70, 76, 90, 1) ;
+    color: white;
+}
+.txt-container p{
+    margin-top: 2rem;
+    margin-right: 5rem;
+    margin-left:5rem;
+    font-family: 'Inria Sans';
+    font-size: 20px;
+    text-align: justify;
+}
+/*Midsection, text and side slides*/
+.section2{
+    margin-top: 2.5rem;
+}
+.section2 h3, .section2 h4{
+    font-family: 'Inria Sans';
+    text-decoration: none;
+    margin-left:5rem;
+    margin-right: 5rem;
+    font-weight: 200;
+}
+.section2 h3{
+    font-size: 28px;
+}
+.section2 h4{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 25px;
+}
+.midslides{
+    position: relative;
+    display: inline-flex;
+    width:100vw;
+    height: 18rem;
+    top: 22px;
+    justify-content: center;
+}
+.para{
+    height:100px;
+    width:40vw;
+    position: relative;
+    left:5rem;
+    font-family: 'Inria Sans';
+    top: 1rem;
+    font-size: 20px;
+    text-align: justify;
+    margin-right: 40px;
+}
+.sideslide-container{
+    width: 40vw;
+    position: relative;
+    height: 17rem;
+}
+.side{
+    height: 100%;
+    width:40vw;
+    position:relative;
+    left:8rem;
+    overflow: hidden;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.side img{
+    width: 70%;
+    height: 90%;
+}
+.text {
+    color: #f2f2f2;
+    font-size: 20px;
+    font-family: 'Inria Sans';
+    position: absolute;
+    bottom: 8px;
+    width: 70%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 20px;
+  }
+.prev, .next{
+    cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next{
+    right: 4px;
+    border-radius: 3px 0 0 3px;
+}
+.prev{
+    left: 0;
+    margin-left: 6rem;
+}
+.prev:hover, .next:hover{
+    background-color: rgba(36, 36, 36, 0.8);
+}
+.active{
+    background-color: rgb(113, 113, 113);
+}
+.sidefade{
+    animation-name: sidefade;
+    animation-duration: 1.5s;
+}
+@keyframes sidefade{
+    from{opacity: 0.4} to{opacity: 1}
+}
+/*Card section*/
+.lastsection{
+    position: relative;
+    display: flex;
+    font-family: 'Inria sans';
+    font-size: 22px;
+    font-weight:200;
+    margin-top: 15px;
+}
+.card-heading{
+    margin: 20px;
+    font-size: 26px;
+    font-weight: 200;
+    font-family: 'Inria Sans';
+}
+.card-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin: 20px 30px 0 30px;
+}
+.card{
+    height: 100%;
+    margin-top: 2.5rem ;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    position:relative;
+    display: none;
+}
+.prevcard, .nextcard{
+    cursor: pointer;
+    position: relative;
+    top: 50%;
+    width: auto;
+    height: 25px;
+    margin-top: -22px;
+    padding: 10px;
+    color: rgb(5, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.nextcard{
+    right: 10rem;
+    border-radius: 3px 0 0 3px;
+}
+.prevcard{
+    right: 58.8rem;
+    margin-left: 6rem;
+}
+.prevcard:hover, .nextcard:hover{
+    background-color: rgba(188, 188, 188, 0.676);
+}
+.active{
+    background-color: rgb(113, 113, 113);
+}
+.cardfade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes cardfade{
+    from{opacity: 0.4} to{opacity: 1}
+}

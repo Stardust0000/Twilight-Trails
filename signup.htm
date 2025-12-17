@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="login-style.css" rel="stylesheet">
+    <title>Sign Up</title>
+</head>
+<body>
+     <!-- Login container -->
+   <div class="login-container">
+    <h1>Welcome!</h1>
+  
+    <!-- Form -->
+    <form class="login-form" method="post" action="mainpage.htm">
+      <div class="field">
+        <label>Username:</label>
+        <input type="text" name="usn" id="usn" required pattern="^[A-Za-z]{3,49}$">
+        </div>
+
+      <div class="field">
+      <label>Email:</label>
+      <input type="email" name="em" id="em" required pattern="^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-ZA-Z]{2,}$">
+      </div>
+
+    <div class="field">
+      <label>Password:</label>
+      <input type="password" name="pwd1" id="pwd1" required pattern=".{8,}">
+    </div>
+      
+    <div class="field">
+      <label>Confirm Password:</label>
+      <input type="password" name="pwd2" id="pwd2" required pattern=".{8,}">
+      <span class="errorText"></span>
+    </div>
+      
+    <button type="submit">Signup</button>
+    </form>
+    <br>
+    <span class="lnk"><a href="login.htm">Old pal? Login!</a></span>
+   </div>
+<script src="signup.js"></script>
+</body>
+</html>
