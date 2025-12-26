@@ -5,6 +5,12 @@
     margin: 0px;
     padding: 0px;
 }
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+
 body{    
     background: url(Assets/landing_page.jpeg);
     background-repeat: no-repeat;
@@ -147,6 +153,8 @@ body{
     max-width: 1200px;
     color: var(--txt);
     margin: 140px auto 0px 40px;
+    /* margin-top: 50px;
+    margin-left: auto; */
     align-items: center;
     backdrop-filter: blur(2px);
 }
@@ -256,10 +264,7 @@ body{
   }
 }
 
-
-/* ---------------------------------- */
-/* MOBILE VIEW (max-width: 768px) */
-/* ---------------------------------- */
+/* ------------------------------------------------------------------ */
 @media (max-width: 425px) {
 
   body {
@@ -294,37 +299,35 @@ body{
   }
 
   /* Hero center for mobile */
-  .hero {
-      top: 45%;
+  /* .hero {
+    /* position: static;
+    margin-top: 16rem;
+    text-align: center; */
+    /*   top: 45%;
       transform: translateX(-50%);
       text-align: center;
-      padding-inline: 10px;
-  }
+      padding-inline: 10px; }*/
 
   .heading {
-      font-size: 36px;
+      font-size: 30px;
   }
 
   .subtitle {
       font-size: 14px;
+      font-style: italic;
+      letter-spacing: 1px;
   }
 
   /* Footer becomes vertical stack */
-  .location-wrapper,.footer-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 14px;
-      margin-top: 50px;
-      margin-left: auto;
-      width: auto;
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
   }
 
-  .left-block {
-      flex-direction: row;
-      gap: 10px;
-      border-right: none;
+    .location-wrapper {
+        margin: 2rem auto;
+        padding-bottom: 9px; /* space for bottom bar */
   }
 
   .verline {
@@ -332,10 +335,11 @@ body{
   }
 
   .footer-para {
-      max-width: 300px;
       font-size: 12px;
       text-align: center;
       line-height: 19px;
+      padding-inline: 10px;
+      font-style: italic;
   }
   .footer-text{
     font-size: 15px;
